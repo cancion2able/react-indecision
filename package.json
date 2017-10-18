@@ -1,0 +1,19 @@
+{
+  "name": "react-indecision",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cancion2able/react-indecision",
+  "author": "Stanley Owen",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
