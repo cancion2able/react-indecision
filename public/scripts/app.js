@@ -1,21 +1,64 @@
 'use strict';
 
-var nameVar = 'Andrew';
-var nameVar = 'Mike';
-console.log('nameVar', nameVar);
+console.log("App.js is running!");
 
-var nameLet = 'Jen';
-console.log('nameLet', nameLet);
+var app = {
+  title: 'Indecision App',
+  subtitle: 'An awesome app',
+  options: ['One', 'Two']
+};
 
-var nameConst = 'Frank';
-console.log('nameConst', nameConst);
+var template = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    app.title
+  ),
+  app.subtitle && React.createElement(
+    'p',
+    null,
+    app.subtitle
+  ),
+  React.createElement(
+    'p',
+    null,
+    app.options.length > 0 ? 'Here are your options' : 'No options'
+  ),
+  React.createElement(
+    'ol',
+    null,
+    React.createElement(
+      'li',
+      null,
+      'Item one'
+    ),
+    React.createElement(
+      'li',
+      null,
+      'Item two'
+    )
+  )
+);
 
-var fullName = 'Andrew Mead';
-var firstName = void 0;
+var count = 0;
 
-if (fullName) {
-  firstName = fullName.split(' ')[0];
-  console.log(firstName);
-}
+var templateTwo = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    'Count: ',
+    count
+  ),
+  React.createElement(
+    'button',
+    { id: 'my-id', 'class': 'button' },
+    '+1'
+  )
+);
 
-console.log(firstName);
+var appRoot = document.getElementById("app");
+ReactDOM.render(templateTwo, appRoot);
